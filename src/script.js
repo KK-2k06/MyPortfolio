@@ -1,0 +1,41 @@
+import "./style.css";
+import Orchestrator from "./ThreeJS/Orchestrator.js";
+
+const orchestrator = new Orchestrator(document.querySelector("canvas.webgl"));
+
+// Scroll-driven curtain-reveal transition (Hero → About)
+import "./scroll-reveal.js";
+
+import initSkillsLoop from "./skills-loop.js";
+initSkillsLoop();
+
+import { initVariableProximity } from "./variable-proximity.js";
+initVariableProximity();
+
+// Typewriter effect for last name
+const typewriterEl = document.querySelector('.typewriter-text');
+if (typewriterEl) {
+    const text = typewriterEl.getAttribute('data-text');
+    let i = 0;
+    
+    // Start typing immediately as the curtain fades in
+    setTimeout(() => {
+        const interval = setInterval(() => {
+            typewriterEl.textContent += text.charAt(i);
+            i++;
+            if (i >= text.length) {
+                clearInterval(interval);
+                
+                // Stop the cursor blinking once typing is finished
+                const cursorEl = document.querySelector('.typewriter-cursor');
+                if (cursorEl) {
+                    cursorEl.style.animation = 'none';
+                    cursorEl.style.opacity = '1';
+                }
+                
+                // Signal to scroll-reveal that the cursor is in its final position
+                // (No longer needed, morphing removed)
+            }
+        }, 120); // 120ms per character
+    }, 300);
+}
