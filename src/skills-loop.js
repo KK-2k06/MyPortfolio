@@ -44,18 +44,24 @@ export default function initSkillsLoop() {
         }
 
         if (!prefersReducedMotion) {
-            // The scroll-reveal timeline is 120% scroll distance. 
-            // The content reveals at 0.6 progress. 120 * 0.6 = 72.
-            // This triggers exactly when the content is revealed!
+            let isSkillsActive = false;
+
+            // The scroll-reveal timeline is 350% scroll distance. 
+            // The about content reveals at ~0.22 progress. 350 * 0.22 = 77.
+            // The wipe starts at ~0.65 progress. 350 * 0.65 = 227.
             ScrollTrigger.create({
                 trigger: ".hero-pin-wrap",
-                start: "top -72%",
+                start: "top -77%",
+                end: "top -227%",
                 onEnter: () => {
+                    isSkillsActive = true;
                     // Reset to exactly item 01 before playing
                     gsap.set(loopInner, { y: 0 });
                     playIdle();
                 },
-                onLeaveBack: pauseIdle
+                onLeaveBack: () => { isSkillsActive = false; pauseIdle(); },
+                onLeave: () => { isSkillsActive = false; pauseIdle(); },
+                onEnterBack: () => { isSkillsActive = true; playIdle(); }
             });
 
             // Pause on hover
@@ -66,7 +72,8 @@ export default function initSkillsLoop() {
             });
             container.addEventListener('mouseleave', () => {
                 const isCoasting = momentumTween && momentumTween.isActive();
-                if (!Draggable.get(loopInner)?.isDragging && !container.matches(':focus-visible') && !isCoasting) {
+                // Only resume if we are still within the valid scroll window!
+                if (isSkillsActive && !Draggable.get(loopInner)?.isDragging && !container.matches(':focus-visible') && !isCoasting) {
                     playIdle();
                 }
             });
