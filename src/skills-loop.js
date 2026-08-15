@@ -44,25 +44,10 @@ export default function initSkillsLoop() {
         }
 
         if (!prefersReducedMotion) {
-            let isSkillsActive = false;
-
-            // The scroll-reveal timeline is 400% scroll distance. 
-            // The about content reveals at ~0.18 progress. 400 * 0.18 = 72.
-            // The wipe ends at 1.0 progress. 400 * 1.0 = 400.
-            ScrollTrigger.create({
-                trigger: ".hero-pin-wrap",
-                start: "top -72%",
-                end: "top -400%",
-                onEnter: () => {
-                    isSkillsActive = true;
-                    // Reset to exactly item 01 before playing
-                    gsap.set(loopInner, { y: 0 });
-                    playIdle();
-                },
-                onLeaveBack: () => { isSkillsActive = false; pauseIdle(); },
-                onLeave: () => { isSkillsActive = false; pauseIdle(); },
-                onEnterBack: () => { isSkillsActive = true; playIdle(); }
-            });
+            let isSkillsActive = true;
+            
+            // Start scrolling immediately and never stop (unless hovered/dragged)
+            playIdle();
 
             // Pause on hover
             container.addEventListener('mouseenter', () => {

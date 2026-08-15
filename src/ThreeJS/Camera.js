@@ -10,7 +10,8 @@ export default class Camera {
         this.canvas = this.orchestrator.canvas;
 
         // Orbit parameters
-        this.radius = 12;
+        this.baseRadius = 12;
+        this.radius = this.baseRadius;
 
         // Max mouse influence in radians
         // mouse Y → rotation around X axis (up/down tilt)
@@ -25,6 +26,7 @@ export default class Camera {
         this.setInstance();
         this.setMouseListener();
         this.setGUI();
+        this.resize(); // Initialize responsive radius
     }
 
     setInstance() {
@@ -66,6 +68,16 @@ export default class Camera {
     resize() {
         this.instance.aspect = this.sizes.width / this.sizes.height;
         this.instance.updateProjectionMatrix();
+
+        // Responsive camera distance: move camera further back on wider screens
+        // so the cubes don't appear awkwardly scaled up or zoomed in.
+        const referenceWidth = 1200;
+        if (this.sizes.width > referenceWidth) {
+            const scale = Math.sqrt(this.sizes.width / referenceWidth);
+            this.radius = this.baseRadius * scale;
+        } else {
+            this.radius = this.baseRadius;
+        }
     }
 
     update() {

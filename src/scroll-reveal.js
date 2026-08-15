@@ -77,30 +77,25 @@ function init() {
         duration: phase1Duration
     }, 0);
 
+
     // Proxy object to tween colors and amplitude correctly into the shader
     const shaderProxy = {
-        base: "#2c2c2c",
-        high: "#40d66f",
-        amplitude: originalAmplitude
+        high: "#40d66f"
     };
 
-    // Dim the grid significantly for the About section (approx 40% brightness)
+    // Reduce only the green intensity for the next sections
     tl.to(shaderProxy, {
-        base: "#121212", 
         high: "#1a562c", 
-        amplitude: originalAmplitude * 1.5,
         ease: "power2.out",
         duration: phase1Duration,
         onUpdate: () => {
             if (stage.shaderRef) {
-                stage.shaderRef.uniforms.uColorBase.value.set(shaderProxy.base);
                 stage.shaderRef.uniforms.uColorHigh.value.set(shaderProxy.high);
-                stage.shaderRef.uniforms.uAmplitude.value = shaderProxy.amplitude;
             }
         }
     }, 0);
 
-    // ── STEP 2: About Fade In ─────────────────────────
+
     tl.fromTo(aboutSection, 
         { autoAlpha: 0, scale: 0.95, pointerEvents: "none" },
         { autoAlpha: 1, scale: 1, pointerEvents: "none", ease: "power2.out", duration: phase1Duration * 0.8 }, 
@@ -143,67 +138,15 @@ function init() {
         duration: scrollDuration
     }, scrollStart);
 
-    // Re-enable pointer events on Projects section when fully in view
-    tl.set(projectsSection, { pointerEvents: "auto" }, scrollEnd);
+    // Keep pointer events none on the projects section so mouse trails still work, 
+    // we will enable pointer events only on the interactive children via CSS.
+    tl.set(projectsSection, { pointerEvents: "none" }, scrollEnd);
 
     // ════════════════════════════════════════════════════════════════════════
-    // PHASE 3: PROJECTS CARD STACK SHUFFLE  (timeline 0.6 → 1.0)
+    // PHASE 3: PROJECTS (To be implemented later for multiple projects)
     // ════════════════════════════════════════════════════════════════════════
-    const cards = [
-        document.getElementById("card-0"),
-        document.getElementById("card-1"),
-        document.getElementById("card-2")
-    ];
-    const trackers = [
-        document.getElementById("tracker-0"),
-        document.getElementById("tracker-1"),
-        document.getElementById("tracker-2")
-    ];
-
-    if (cards[0] && trackers[0]) {
-        // Initial setup for the stack (stacked vertically peeking from bottom)
-        gsap.set(cards[0], { y: 0, scale: 1, zIndex: 3, opacity: 1 });
-        gsap.set(cards[1], { y: 40, scale: 0.95, zIndex: 2, opacity: 1 });
-        gsap.set(cards[2], { y: 80, scale: 0.90, zIndex: 1, opacity: 1 });
-
-        const stackStart = 0.60;
-        const stackDuration = 0.40;
-        const step = stackDuration / 2; // two transitions (0->1, 1->2)
-
-        // Step 1: Card 0 leaves (slides UP and fades), Card 1 active, Card 2 moves up
-        tl.to(cards[0], { yPercent: -50, scale: 1.05, opacity: 0, ease: "power2.inOut", duration: step }, stackStart);
-        tl.to(cards[1], { y: 0, scale: 1, ease: "power2.inOut", duration: step }, stackStart);
-        tl.to(cards[2], { y: 40, scale: 0.95, ease: "power2.inOut", duration: step }, stackStart);
-        
-        // Tracker 0 to 1
-        tl.add(() => {
-            trackers.forEach(t => t.classList.remove("active"));
-            trackers[1].classList.add("active");
-        }, stackStart + (step * 0.5));
-        
-        // Reverse for Tracker 0 to 1
-        tl.add(() => {
-            trackers.forEach(t => t.classList.remove("active"));
-            trackers[0].classList.add("active");
-        }, stackStart + (step * 0.49)); 
-
-        // Step 2: Card 1 leaves, Card 2 active
-        const step2Start = stackStart + step;
-        tl.to(cards[1], { yPercent: -50, scale: 1.05, opacity: 0, ease: "power2.inOut", duration: step }, step2Start);
-        tl.to(cards[2], { y: 0, scale: 1, ease: "power2.inOut", duration: step }, step2Start);
-
-        // Tracker 1 to 2
-        tl.add(() => {
-            trackers.forEach(t => t.classList.remove("active"));
-            trackers[2].classList.add("active");
-        }, step2Start + (step * 0.5));
-
-        // Reverse for Tracker 1 to 2
-        tl.add(() => {
-            trackers.forEach(t => t.classList.remove("active"));
-            trackers[1].classList.add("active");
-        }, step2Start + (step * 0.49));
-    }
+    // The static layout is currently in place. Further animation for transitioning
+    // to other projects will be added here based on the chosen design (Morphing, etc).
 }
 
 if (document.readyState === "loading") {
