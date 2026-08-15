@@ -46,13 +46,13 @@ export default function initSkillsLoop() {
         if (!prefersReducedMotion) {
             let isSkillsActive = false;
 
-            // The scroll-reveal timeline is 350% scroll distance. 
-            // The about content reveals at ~0.22 progress. 350 * 0.22 = 77.
-            // The wipe starts at ~0.65 progress. 350 * 0.65 = 227.
+            // The scroll-reveal timeline is 400% scroll distance. 
+            // The about content reveals at ~0.18 progress. 400 * 0.18 = 72.
+            // The wipe ends at 1.0 progress. 400 * 1.0 = 400.
             ScrollTrigger.create({
                 trigger: ".hero-pin-wrap",
-                start: "top -77%",
-                end: "top -227%",
+                start: "top -72%",
+                end: "top -400%",
                 onEnter: () => {
                     isSkillsActive = true;
                     // Reset to exactly item 01 before playing
