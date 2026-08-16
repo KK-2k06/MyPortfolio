@@ -143,10 +143,93 @@ function init() {
     tl.set(projectsSection, { pointerEvents: "none" }, scrollEnd);
 
     // ════════════════════════════════════════════════════════════════════════
-    // PHASE 3: PROJECTS (To be implemented later for multiple projects)
+    // PHASE 3: PROJECTS TRANSITION (Morphing in-place)
     // ════════════════════════════════════════════════════════════════════════
-    // The static layout is currently in place. Further animation for transitioning
-    // to other projects will be added here based on the chosen design (Morphing, etc).
+    const proj1 = document.querySelector("#project-1");
+    const proj2 = document.querySelector("#project-2");
+
+    if (proj1 && proj2) {
+        const transStart = 0.65;
+        const transDuration = 0.25; // 0.65 to 0.90
+        const inStart = transStart + transDuration * 0.4; // slight overlap
+
+        // --- Stack-Scale Swap Transition ---
+        
+        const p1Duration = transDuration * 0.5;
+        const p2Start = transStart + transDuration * 0.15;
+        const p2Duration = transDuration * 0.85;
+
+        // Project 1 scales down, completely vanishes (opacity 0), and pushes slightly up
+        tl.to(proj1, {
+            scale: 0.92,
+            opacity: 0,
+            yPercent: -5,
+            ease: "power2.inOut",
+            duration: p1Duration
+        }, transStart);
+
+        // Hide proj1 completely after it fades out so it doesn't block clicks
+        tl.set(proj1, { visibility: "hidden" }, transStart + p1Duration);
+
+        // Project 2 slides up from below, starting fully opaque
+        tl.fromTo(proj2, 
+            { 
+                yPercent: 100, 
+                opacity: 1, 
+                visibility: "visible" 
+            }, 
+            {
+                yPercent: 0,
+                ease: "power2.out",
+                duration: p2Duration
+            }, 
+        p2Start);
+    }
+
+    // ════════════════════════════════════════════════════════════════════════
+    // NAVIGATION FADE-IN-PLACE LOGIC
+    // ════════════════════════════════════════════════════════════════════════
+    document.querySelectorAll('a[href="#about"], a[href="#project"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = anchor.getAttribute('href');
+            let targetProgress = 0;
+            
+            if (targetId === '#about') {
+                targetProgress = 0.39; // Jump further into Phase 1 to ensure all staggered elements have finished fading in
+            } else if (targetId === '#project') {
+                targetProgress = 0.63; // Phase 2 completes at 0.60, rest phase is 0.60 - 0.65
+            }
+            
+            const st = tl.scrollTrigger;
+            if (st) {
+                const targetScroll = st.start + (st.end - st.start) * targetProgress;
+                const overlay = document.querySelector('.overlay');
+                
+                // Block clicks during transition
+                document.body.style.pointerEvents = 'none';
+                
+                // 1. Fade out the entire UI
+                gsap.to(overlay, { opacity: 0, duration: 0.3, onComplete: () => {
+                    
+                    // 2. Instantly jump the native scroll position
+                    window.scrollTo({ top: targetScroll, behavior: 'auto' });
+                    
+                    // 3. Force the GSAP timeline instantly to the target progress
+                    tl.progress(targetProgress);
+                    
+                    // 4. Kill the GSAP scrub delay so it doesn't animate from the old position
+                    const scrubTween = st.getTween();
+                    if (scrubTween) scrubTween.kill();
+                    
+                    // 5. Fade the UI back in
+                    gsap.to(overlay, { opacity: 1, duration: 0.4, onComplete: () => {
+                        document.body.style.pointerEvents = '';
+                    }});
+                }});
+            }
+        });
+    });
 }
 
 if (document.readyState === "loading") {

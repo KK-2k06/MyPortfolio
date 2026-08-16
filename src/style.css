@@ -654,9 +654,16 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vh, 4rem);
+    justify-content: center; /* Centers the projects stack vertically */
     flex: 1;
     min-height: 0;
+}
+
+.projects-stack {
+    display: grid;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden; /* Hide sliding projects */
 }
 
 .projects-header-row {
@@ -694,6 +701,7 @@ body {
 }
 
 .project-presentation {
+    grid-area: 1 / 1;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: clamp(1rem, 4vw, 4rem);
@@ -754,77 +762,162 @@ body {
     margin-bottom: clamp(0.5rem, 1.5vh, 2rem);
 }
 
-/* Tech Cluster Bubbles */
-.tech-cluster {
-    position: relative;
-    width: 100%;
-    height: clamp(200px, 30vh, 300px);
-    margin-top: clamp(0.5rem, 1vh, 1rem);
+/* ═══════════════════════════════════════
+   SHORT VIEWPORT COMPRESSION (PROJECTS)
+   ═══════════════════════════════════════ */
+@media (max-height: 850px) {
+    .projects-section {
+        padding: clamp(1vh, 2vh, 4vh) clamp(2vw, 4vw, 8vw);
+    }
+    
+    .project-title-large {
+        font-size: clamp(2.5rem, 4vw, 4.5rem);
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-desc-large {
+        font-size: clamp(0.85rem, 1vw, 1rem);
+        margin-bottom: 1rem;
+    }
+    
+    .project-presentation {
+        gap: clamp(1rem, 2vw, 2rem);
+    }
+    
+    .bento-grid-p1 {
+        gap: 0.5rem;
+    }
 }
 
-.tech-bubble {
-    position: absolute;
-    border-radius: 50%;
+/* True Bento Grid Layout (CSS Grid) */
+.bento-grid-p1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: dense;
+    gap: clamp(0.4rem, 1vh, 0.75rem);
+    width: 100%;
+    height: clamp(220px, 30vh, 280px);
+    margin-top: 1rem;
+}
+
+.bento-grid-p2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    gap: clamp(0.4rem, 1vh, 0.75rem);
+    width: 100%;
+    height: clamp(160px, 28vh, 220px);
+    margin-top: 1rem;
+}
+
+.bento-item {
+    background: transparent;
+    border: 1px solid rgba(0, 255, 128, 0.2); /* Faint green border */
+    border-radius: 4px; /* Sharp corners */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background: rgba(10, 20, 15, 0.8);
-    border: 1px solid rgba(74, 222, 128, 0.2);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    align-items: center;
+    padding: clamp(0.2rem, 0.5vh, 0.4rem);
+    transition: all 0.3s ease;
     backdrop-filter: blur(5px);
     pointer-events: auto;
-    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.tech-bubble:hover {
-    transform: scale(1.05);
-    border-color: rgba(74, 222, 128, 0.5);
-    z-index: 10;
+.bento-item:hover {
+    background: rgba(0, 255, 128, 0.05);
+    border-color: rgba(0, 255, 128, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.1);
 }
 
-.bubble-title {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
+/* Grid Size Modifiers */
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-solid {
+    background: rgba(0, 255, 128, 0.08); /* Even darker green tint */
+    border: 1px solid rgba(0, 255, 128, 0.25);
+}
+
+.bento-solid:hover {
+    background: rgba(0, 255, 128, 0.12);
+}
+
+.bento-wide {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.bento-tall {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.bento-normal {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Text styles */
+.bento-item .bubble-title {
+    font-family: 'Space Mono', monospace; /* Monospace font */
+    font-weight: normal;
+    color: var(--accent); /* Green text */
+    font-size: clamp(0.7rem, 1vw, 1rem); /* Reverted to larger base size */
+    text-align: center;
+    line-height: 1.1;
+    transition: all 0.3s ease;
+}
+
+.bento-item .bubble-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.45rem, 0.6vw, 0.65rem);
+    color: var(--text-dim);
+    margin-top: 0.2rem;
+    text-align: center;
+    line-height: 1.1;
+    transition: color 0.3s ease;
+}
+
+.bento-item:hover .bubble-title {
     color: var(--accent);
 }
 
-.bubble-sub {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--text-dim);
-    margin-top: 0.2rem;
+.bento-wide .bubble-title,
+.bento-tall .bubble-title {
+    font-size: clamp(0.9rem, 1.3vw, 1.3rem); /* Reverted to larger size */
+    white-space: nowrap;
 }
 
-/* Center YOLOv8 Bubble */
-.bubble-center {
-    width: clamp(100px, 15vh, 140px);
-    height: clamp(100px, 15vh, 140px);
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    background: rgba(20, 40, 25, 0.9);
-    border: 1px solid rgba(74, 222, 128, 0.4);
-    z-index: 5;
+.text-sm .bubble-title {
+    font-size: clamp(0.6rem, 0.9vw, 0.9rem) !important;
 }
-.bubble-center:hover { transform: translate(-50%, -50%) scale(1.05); }
-.bubble-center .bubble-title { font-size: clamp(1.1rem, 2vh, 1.5rem); }
 
-/* Satellite bubbles positions (approximations) */
-.bubble-1 { width: clamp(65px, 10vh, 90px); height: clamp(65px, 10vh, 90px); top: 10%; left: 35%; transform: translate(-50%, -50%); z-index: 2; }
-.bubble-2 { width: clamp(75px, 11vh, 100px); height: clamp(75px, 11vh, 100px); top: 15%; left: 60%; transform: translate(-50%, -50%); z-index: 3; }
-.bubble-3 { width: clamp(70px, 10.5vh, 95px); height: clamp(70px, 10.5vh, 95px); top: 40%; left: 20%; transform: translate(-50%, -50%); z-index: 4; }
-.bubble-4 { width: clamp(60px, 9vh, 80px); height: clamp(60px, 9vh, 80px); top: 65%; left: 15%; transform: translate(-50%, -50%); z-index: 2; }
-.bubble-5 { width: clamp(75px, 11vh, 100px); height: clamp(75px, 11vh, 100px); top: 85%; left: 30%; transform: translate(-50%, -50%); z-index: 4; }
-.bubble-6 { width: clamp(70px, 10.5vh, 95px); height: clamp(70px, 10.5vh, 95px); top: 90%; left: 55%; transform: translate(-50%, -50%); z-index: 3; }
-.bubble-7 { width: clamp(65px, 9.5vh, 85px); height: clamp(65px, 9.5vh, 85px); top: 75%; left: 75%; transform: translate(-50%, -50%); z-index: 2; }
-.bubble-8 { width: clamp(65px, 10vh, 90px); height: clamp(65px, 10vh, 90px); top: 45%; left: 80%; transform: translate(-50%, -50%); z-index: 4; }
-.bubble-9 { width: clamp(60px, 9vh, 80px); height: clamp(60px, 9vh, 80px); top: 25%; left: 85%; transform: translate(-50%, -50%); z-index: 2; }
-
-.bubble-1:hover, .bubble-2:hover, .bubble-3:hover, .bubble-4:hover, .bubble-5:hover, .bubble-6:hover, .bubble-7:hover, .bubble-8:hover, .bubble-9:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+.bento-wide.text-sm .bubble-title {
+    font-size: clamp(0.7rem, 1vw, 1.05rem) !important;
 }
-.bubble-1 .bubble-title, .bubble-2 .bubble-title, .bubble-3 .bubble-title, .bubble-4 .bubble-title, .bubble-5 .bubble-title, .bubble-6 .bubble-title, .bubble-7 .bubble-title, .bubble-8 .bubble-title, .bubble-9 .bubble-title { font-size: clamp(0.7rem, 1vh, 0.9rem); }
+
+.bento-wide .bubble-sub,
+.bento-tall .bubble-sub {
+    font-size: clamp(0.7rem, 0.95vw, 0.9rem);
+    white-space: nowrap;
+}
+
+.bento-large .bubble-title {
+    font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+}
+
+.bento-large .bubble-sub {
+    font-size: clamp(0.85rem, 1.1vw, 1rem);
+}
+
+
 
 
 /* Right Column */
@@ -879,7 +972,7 @@ body {
 .preview-image-placeholder {
     width: 100%;
     height: 100%;
-    min-height: clamp(100px, 20vh, 300px);
+    /* Removed min-height to allow perfect flex alignment with left panel */
 }
 
 .preview-stats-row {
@@ -937,7 +1030,46 @@ body {
 }
 
 .preview-link:hover {
-    background: rgba(74, 222, 128, 0.05);
+    color: var(--accent);
+    background: rgba(0, 255, 128, 0.05);
+}
+
+.flip-link {
+    padding: 0;
+}
+.flip-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.flip-front {
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.flip-back {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: var(--accent);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.flip-link:hover .flip-front,
+.flip-link:hover .flip-back {
+    transform: translateY(-100%);
 }
 
 .link-divider {

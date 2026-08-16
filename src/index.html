@@ -89,7 +89,6 @@
                         <div class="top-bar-inner">
                             <nav class="nav-links">
                                 <a href="#about">About</a>
-                                <a href="#project">Project</a>
                                 <a href="#contact">Contact</a>
                             </nav>
                             <a href="mailto:hello@example.com" class="cta-link">Say Hello &#8599;</a>
@@ -231,63 +230,147 @@
                      ═══════════════════════════════════════════════════ -->
                 <div class="projects-section" id="project">
                     <div class="projects-zone-main">
-                        <div class="project-presentation">
-                            <!-- Left Column: Details & Tech Stack -->
-                            <div class="project-details">
-                                <span class="eyebrow" style="margin-bottom: clamp(1rem, 3vh, 4rem); display: block;">// PROJECTS</span>
-                                <div class="project-featured-tag">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    FEATURED PROJECT
-                                </div>
+                        <span class="eyebrow" style="margin-bottom: clamp(1rem, 3vh, 4rem); display: block;">// PROJECTS</span>
+                        
+                        <div class="projects-stack" style="display: grid; flex: 1; min-height: 0; width: 100%;">
+                            <div class="project-presentation" id="project-1">
+                                <!-- Left Column: Details & Tech Stack -->
+                                <div class="project-details">
                                 <h2 class="project-title-large">Nutrinet</h2>
-                                <div class="project-divider"></div>
                                 <p class="project-desc-large">
-                                    AI-powered nutrition detection system using YOLOv8 and deep learning to identify food items and analyze nutritional content in real-time.
+                                    NutriNet is an AI-powered personalized nutrition and health assistant that uses YOLO for real-time food detection, enabling users to scan meals instantly and track calories, macros, and daily intake. It predicts cardiovascular risk based on personal health metrics and family history, and offers personalized nutrition advice to help users build healthier dietary habits.
                                 </p>
 
                                 <h4 class="tech-models-heading">TECH & MODELS</h4>
-                                <div class="tech-cluster">
-                                    <!-- Center Hub -->
-                                    <div class="tech-bubble bubble-center">
-                                        <span class="bubble-title">YOLOv8</span>
-                                        <span class="bubble-sub">Detection</span>
+                                <div class="bento-grid-p1">
+                                    <div class="bento-item bento-large bento-solid">
+                                        <span class="bubble-title">YOLO 26M</span>
+                                        <span class="bubble-sub">Vision Model</span>
                                     </div>
-                                    <!-- Surrounding Bubbles -->
-                                    <div class="tech-bubble bubble-1">
-                                        <span class="bubble-title">PyTorch</span>
-                                        <span class="bubble-sub">DL Framework</span>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">Edge AI</span>
                                     </div>
-                                    <div class="tech-bubble bubble-2">
-                                        <span class="bubble-title">OpenCV</span>
-                                        <span class="bubble-sub">CV Library</span>
-                                    </div>
-                                    <div class="tech-bubble bubble-3">
+                                    <div class="bento-item bento-normal">
                                         <span class="bubble-title">FastAPI</span>
-                                        <span class="bubble-sub">Backend</span>
                                     </div>
-                                    <div class="tech-bubble bubble-4">
-                                        <span class="bubble-title">Pandas</span>
-                                        <span class="bubble-sub">Data</span>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">React</span>
                                     </div>
-                                    <div class="tech-bubble bubble-5">
-                                        <span class="bubble-title">MongoDB</span>
-                                        <span class="bubble-sub">Database</span>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">Tailwind</span>
                                     </div>
-                                    <div class="tech-bubble bubble-6">
-                                        <span class="bubble-title">Matplotlib</span>
-                                        <span class="bubble-sub">Visualization</span>
+                                    <div class="bento-item bento-wide text-sm">
+                                        <span class="bubble-title">Portion Scaling Algorithm</span>
                                     </div>
-                                    <div class="tech-bubble bubble-7">
-                                        <span class="bubble-title">AWS S3</span>
-                                        <span class="bubble-sub">Storage</span>
+                                    <div class="bento-item bento-wide text-sm">
+                                        <span class="bubble-title">Hereditary Risk Analysis</span>
                                     </div>
-                                    <div class="tech-bubble bubble-8">
-                                        <span class="bubble-title">Scikit-Learn</span>
-                                        <span class="bubble-sub">ML Utils</span>
+                                    <div class="bento-item bento-wide">
+                                        <span class="bubble-title">ONNX Web</span>
                                     </div>
-                                    <div class="tech-bubble bubble-9">
-                                        <span class="bubble-title">NumPy</span>
-                                        <span class="bubble-sub">Data</span>
+                                    <div class="bento-item bento-large bento-solid">
+                                        <span class="bubble-title">Random Forest</span>
+                                        <span class="bubble-sub">Classification</span>
+                                    </div>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">Supabase</span>
+                                    </div>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">Gemini 2.5</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Preview & Stats -->
+                            <div class="project-preview-area">
+                                <div class="preview-box">
+                                    <div class="preview-header">
+                                        <span class="live-preview-tag">PREVIEW</span>
+                                        <div class="preview-grid-decor"></div>
+                                    </div>
+                                    
+                                    <div class="preview-image-container">
+                                        <!-- Real image should go here, using a placeholder gradient for now or the salad image if we had one -->
+                                        <div class="preview-image-placeholder">
+                                            <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #111, #222); display: flex; align-items: center; justify-content: center; color: #555;">[ Salad Image ]</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="preview-stats-row">
+                                        <div class="stat-item">
+                                            <span class="stat-label">MODEL</span>
+                                            <span class="stat-val">YOLOv8 + RF</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-label">DETECTION</span>
+                                            <span class="stat-val">mAP 0.95</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-label">RISK PREDICTION</span>
+                                            <span class="stat-val">AUC 80.03</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-label">DATASET</span>
+                                            <span class="stat-val">11K images</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="preview-links-row">
+                                    <a href="javascript:void(0);" class="preview-link flip-link">
+                                        <div class="flip-inner">
+                                            <div class="flip-front">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                                                VIEW JOURNAL
+                                            </div>
+                                            <div class="flip-back">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                                UNDER REVIEW
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="link-divider"></div>
+                                    <a href="https://github.com/KK-2k06/NutriNet" target="_blank" rel="noopener noreferrer" class="preview-link">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        GITHUB REPO
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-presentation" id="project-2" style="visibility: hidden; opacity: 0; pointer-events: none;">
+
+                            <!-- Left Column: Details & Tech Stack -->
+                            <div class="project-details">
+                                <h2 class="project-title-large">3D Portfolio</h2>
+                                <p class="project-desc-large">
+                                    Interactive 3D portfolio experience featuring custom WebGL shaders, seamless page transitions, and complex GSAP scroll animations.
+                                </p>
+
+                                <h4 class="tech-models-heading">TECH & MODELS</h4>
+                                <div class="bento-grid-p2">
+                                    <div class="bento-item bento-large bento-solid">
+                                        <span class="bubble-title">Three.js</span>
+                                        <span class="bubble-sub">WebGL</span>
+                                    </div>
+                                    <div class="bento-item bento-tall">
+                                        <span class="bubble-title">Vite</span>
+                                        <span class="bubble-sub">Bundler</span>
+                                    </div>
+                                    <div class="bento-item bento-wide">
+                                        <span class="bubble-title">React</span>
+                                        <span class="bubble-sub">UI Layer</span>
+                                    </div>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">GSAP</span>
+                                        <span class="bubble-sub">Animation</span>
+                                    </div>
+                                    <div class="bento-item bento-wide">
+                                        <span class="bubble-title">Shaders</span>
+                                        <span class="bubble-sub">GLSL</span>
+                                    </div>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">Blender</span>
+                                        <span class="bubble-sub">3D Modeling</span>
                                     </div>
                                 </div>
                             </div>
@@ -310,15 +393,15 @@
                                     <div class="preview-stats-row">
                                         <div class="stat-item">
                                             <span class="stat-label">MODEL</span>
-                                            <span class="stat-val">YOLOv8</span>
+                                            <span class="stat-val">Three.js</span>
                                         </div>
                                         <div class="stat-item">
-                                            <span class="stat-label">ACCURACY</span>
-                                            <span class="stat-val">95.1%</span>
+                                            <span class="stat-label">PERFORMANCE</span>
+                                            <span class="stat-val">60 FPS</span>
                                         </div>
                                         <div class="stat-item">
-                                            <span class="stat-label">LATENCY</span>
-                                            <span class="stat-val">42ms</span>
+                                            <span class="stat-label">BUNDLE SIZE</span>
+                                            <span class="stat-val">1.2MB</span>
                                         </div>
                                         <div class="stat-item">
                                             <span class="stat-label">STATUS</span>
@@ -345,6 +428,8 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
