@@ -230,7 +230,7 @@
                      ═══════════════════════════════════════════════════ -->
                 <div class="projects-section" id="project">
                     <div class="projects-zone-main">
-                        <span class="eyebrow" style="margin-bottom: clamp(1rem, 3vh, 4rem); display: block;">// PROJECTS</span>
+                        <span class="eyebrow" style="margin-bottom: clamp(0.5rem, 1.5vh, 2rem); display: block;">// PROJECTS</span>
                         
                         <div class="projects-stack" style="display: grid; width: 100%;">
                             <div class="project-presentation" id="project-1">
@@ -338,36 +338,47 @@
 
                             <!-- Left Column: Details & Tech Stack -->
                             <div class="project-details">
-                                <h2 class="project-title-large">3D Portfolio</h2>
+                                <h2 class="project-title-large">Kyros AI</h2>
                                 <p class="project-desc-large">
-                                    Interactive 3D portfolio experience featuring custom WebGL shaders, seamless page transitions, and complex GSAP scroll animations.
+                                    Kyros AI is an intelligent career coaching assistant that guides candidates from gap analysis to interview readiness. By analyzing user resumes against target job descriptions, it identifies skill gaps and surfaces curated video tutorials to close them. Users can chat directly with video content for deeper understanding, culminating in a full mock interview with AI-generated questions and graded feedback. Kyros transforms vague career goals into a concrete, step-by-step preparation roadmap.
                                 </p>
 
-                                <h4 class="tech-models-heading">TECH & MODELS</h4>
+                                <h4 class="tech-models-heading">UNDER THE HOOD</h4>
                                 <div class="bento-grid-p2">
                                     <div class="bento-item bento-large bento-solid">
-                                        <span class="bubble-title">Three.js</span>
-                                        <span class="bubble-sub">WebGL</span>
+                                        <span class="bubble-title">Mock Interview</span>
+                                        <span class="bubble-sub">Generator & Grader</span>
                                     </div>
-                                    <div class="bento-item bento-tall">
-                                        <span class="bubble-title">Vite</span>
-                                        <span class="bubble-sub">Bundler</span>
+                                    <div class="bento-item bento-wide text-sm">
+                                        <span class="bubble-title">Video RAG Indexing</span>
                                     </div>
-                                    <div class="bento-item bento-wide">
+                                    <div class="bento-item bento-wide text-sm">
+                                        <span class="bubble-title">Conversation Buffer Memory</span>
+                                    </div>
+                                    <div class="bento-item bento-wide text-sm">
+                                        <span class="bubble-title">Markdown-Aware Chunking</span>
+                                    </div>
+                                    <div class="bento-item bento-large bento-solid">
+                                        <span class="bubble-title">Gap Analysis</span>
+                                        <span class="bubble-sub">Resume vs JD Match</span>
+                                    </div>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">FastAPI</span>
+                                    </div>
+                                    <div class="bento-item bento-normal">
                                         <span class="bubble-title">React</span>
-                                        <span class="bubble-sub">UI Layer</span>
                                     </div>
                                     <div class="bento-item bento-normal">
-                                        <span class="bubble-title">GSAP</span>
-                                        <span class="bubble-sub">Animation</span>
-                                    </div>
-                                    <div class="bento-item bento-wide">
-                                        <span class="bubble-title">Shaders</span>
-                                        <span class="bubble-sub">GLSL</span>
+                                        <span class="bubble-title">Supabase</span>
                                     </div>
                                     <div class="bento-item bento-normal">
-                                        <span class="bubble-title">Blender</span>
-                                        <span class="bubble-sub">3D Modeling</span>
+                                        <span class="bubble-title">Tailwind</span>
+                                    </div>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">PyMuPDF</span>
+                                    </div>
+                                    <div class="bento-item bento-normal">
+                                        <span class="bubble-title">YT API</span>
                                     </div>
                                 </div>
                             </div>
@@ -382,45 +393,33 @@
                                     
                                     <div class="preview-image-container">
                                         <!-- Real image should go here, using a placeholder gradient for now or the salad image if we had one -->
-                                        <div class="preview-image-placeholder">
-                                            <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #111, #222); display: flex; align-items: center; justify-content: center; color: #555;">[ Salad Image ]</div>
-                                        </div>
+                                        <img src="./Kyros.png" alt="Kyros AI Project Preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" />
                                     </div>
 
                                     <div class="preview-stats-row">
                                         <div class="stat-item">
-                                            <span class="stat-label">MODEL</span>
-                                            <span class="stat-val">Three.js</span>
+                                            <span class="stat-label">LLM ENGINE</span>
+                                            <span class="stat-val">Gemini 3.5 Flash</span>
                                         </div>
                                         <div class="stat-item">
-                                            <span class="stat-label">PERFORMANCE</span>
-                                            <span class="stat-val">60 FPS</span>
+                                            <span class="stat-label">ARCHITECTURE</span>
+                                            <span class="stat-val">4-Agent System</span>
                                         </div>
                                         <div class="stat-item">
-                                            <span class="stat-label">BUNDLE SIZE</span>
-                                            <span class="stat-val">1.2MB</span>
+                                            <span class="stat-label">VECTOR DB</span>
+                                            <span class="stat-val">ChromaDB</span>
                                         </div>
                                         <div class="stat-item">
-                                            <span class="stat-label">STATUS</span>
-                                            <span class="stat-val live-status"><span class="green-dot">•</span> LIVE</span>
+                                            <span class="stat-label">FRAMEWORK</span>
+                                            <span class="stat-val">LangChain</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="preview-links-row">
-                                    <a href="#" class="preview-link">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                                        VIEW CASE STUDY
-                                    </a>
-                                    <div class="link-divider"></div>
-                                    <a href="#" class="preview-link">
+                                <div class="preview-links-row" style="justify-content: center;">
+                                    <a href="https://github.com/KK-2k06/Kyros" target="_blank" class="preview-link">
                                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                         GITHUB REPO
-                                    </a>
-                                    <div class="link-divider"></div>
-                                    <a href="#" class="preview-link">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                        LIVE DEMO
                                     </a>
                                 </div>
                             </div>

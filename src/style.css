@@ -708,7 +708,7 @@ body {
     flex: 1;
     min-height: 0;
     position: relative;
-    /* Removed pointer-events: auto so grid lets mouse through */
+    align-self: start;
 }
 
 /* Left Column */
@@ -785,7 +785,8 @@ body {
         gap: clamp(1rem, 2vw, 2rem);
     }
     
-    .bento-grid-p1 {
+    .bento-grid-p1,
+    .bento-grid-p2 {
         gap: 0.5rem;
     }
 }
@@ -805,11 +806,11 @@ body {
 .bento-grid-p2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-auto-flow: dense;
     gap: clamp(0.4rem, 1vh, 0.75rem);
     width: 100%;
-    height: clamp(160px, 28vh, 220px);
+    height: clamp(220px, 30vh, 280px);
     margin-top: 1rem;
 }
 
