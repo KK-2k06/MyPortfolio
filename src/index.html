@@ -1,438 +1,579 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kishore Kumar H — Creative Developer</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Mono:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./style.css" />
-    </head>
-    <body>
-        <canvas class="webgl"></canvas>
+<!DOCTYPE html>
 
-        <!-- ═══════════════════════════════════════════════════
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kishore Kumar H — Creative Developer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="./style.css" rel="stylesheet"/>
+</head>
+<body>
+<canvas class="webgl"></canvas>
+<!-- ═══════════════════════════════════════════════════
              HERO PIN SECTION — provides scroll room for the pin
              ═══════════════════════════════════════════════════ -->
-        <div class="hero-pin-wrap">
-            <div class="hero-stage">
-                <div class="overlay">
-                    <!-- ── CURTAIN LEFT ── -->
-                    <div class="curtain-left">
-                        <div class="logo-area">
-                            <div class="logo">K<span class="logo-dot">K.</span></div>
-                            <div class="role-badge">
-                                <span class="badge-dot"></span>
-                                <span>OPEN TO WORK</span>
-                            </div>
-                        </div>
+<div class="hero-pin-wrap">
+<div class="hero-stage">
+<div class="overlay">
+<!-- ── CURTAIN LEFT ── -->
+<div class="curtain-left">
+<div class="logo-area">
+<div class="logo">K<span class="logo-dot">K.</span></div>
+<div class="role-badge">
+<span class="badge-dot"></span>
+<span>OPEN TO WORK</span>
+</div>
+</div>
+<div class="hero-left-content">
+<h1 class="name">
+<span class="name-first">K<span class="spin-i">i</span>shore</span>
+<span class="name-last">
+<span class="typewriter-text" data-text="Kumar H"></span><span class="typewriter-cursor"></span>
+</span>
+</h1>
 
-                        <div class="hero-left-content">
-                            <h1 class="name">
-                                <span class="name-first">K<span class="spin-i">i</span>shore</span>
-                                <span class="name-last">
-                                    <span class="typewriter-text" data-text="Kumar H"></span><span class="typewriter-cursor"></span>
-                                </span>
-                            </h1>
-
-                            <p class="tagline">
+<p class="tagline">
                                 Building immersive digital experiences<br/>
                                 through code, design &amp; motion.
                             </p>
-                        </div>
-
-                        <div class="hero-actions">
-                            <div class="cta-row">
-                                <a href="#project" class="btn-solid">
-                                    View Projects <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="10 5 19 5 19 14"/></svg>
-                                </a>
-                                <a href="resume.pdf" class="btn-outline">
-                                    Résumé <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                                </a>
-                            </div>
-
-                            <div class="socials">
-                                <!-- GitHub -->
-                                <a href="https://github.com/KK-2k06" target="_blank" aria-label="GitHub">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                                    </svg>
-                                </a>
-                                <!-- LinkedIn -->
-                                <a href="https://www.linkedin.com/in/kishore-kumar-h30" target="_blank" aria-label="LinkedIn">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
-                                    </svg>
-                                </a>
-                                <!-- Instagram -->
-                                <a href="https://instagram.com/kumar_h.30" target="_blank" aria-label="Instagram">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                                    </svg>
-                                </a>
-                                <!-- Mail -->
-                                <a href="mailto:kumar.tech3005@gmail.com" aria-label="Email">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ── CURTAIN RIGHT ── -->
-                    <div class="curtain-right">
-                        <div class="top-bar-inner">
-                            <nav class="nav-links">
-                                <a href="#about">About</a>
-                                <a href="#contact">Contact</a>
-                            </nav>
-                            <a href="mailto:hello@example.com" class="cta-link">Say Hello &#8599;</a>
-                        </div>
-
-                        <div class="right-bottom">
-                            <span class="side-label">&#8595; interact with canvas</span>
-                            <div class="stats">
-                                <div class="stat">
-                                    <span class="stat-number">25+</span>
-                                    <span class="stat-label">Tech<br/>&amp; Tools</span>
-                                </div>
-                                <div class="stat-divider"></div>
-                                <div class="stat">
-                                    <span class="stat-number">5+</span>
-                                    <span class="stat-label">Projects<br/>Shipped</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- ═══════════════════════════════════════════════════
+</div>
+<div class="hero-actions">
+<div class="cta-row">
+<a class="btn-solid" href="#project">
+                                    View Projects <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="5" x2="19" y1="19" y2="5"></line><polyline points="10 5 19 5 19 14"></polyline></svg>
+</a>
+<a class="btn-outline" href="./Kishore_Kumar_H_Resume.pdf" target="_blank">
+                                    Résumé <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+</a>
+</div>
+<div class="socials">
+<!-- GitHub -->
+<a aria-label="GitHub" href="https://github.com/KK-2k06" target="_blank">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18">
+<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+</a>
+<!-- LinkedIn -->
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/kishore-kumar-h30" target="_blank">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18">
+<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<!-- Instagram -->
+<a aria-label="Instagram" href="https://instagram.com/kumar_h.30" target="_blank">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18">
+<rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+</svg>
+</a>
+<!-- Mail -->
+<a aria-label="Email" href="mailto:kumar.tech3005@gmail.com">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<!-- ── CURTAIN RIGHT ── -->
+<div class="curtain-right">
+<div class="top-bar-inner">
+<nav class="nav-links">
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="cta-link" href="mailto:kumar.tech3005@gmail.com">Say Hello ↗</a>
+</div>
+<div class="right-bottom">
+<span class="side-label">↓ interact with canvas</span>
+<div class="stats">
+<div class="stat">
+<span class="stat-number">25+</span>
+<span class="stat-label">Tech<br/>&amp; Tools</span>
+</div>
+<div class="stat-divider"></div>
+<div class="stat">
+<span class="stat-number">5+</span>
+<span class="stat-label">Projects<br/>Shipped</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ═══════════════════════════════════════════════════
                      ABOUT SECTION (Full Viewport)
                      ═══════════════════════════════════════════════════ -->
-                <div class="about-section" id="about">
-                    <!-- Zone: Main (Now contains Top labels and Body paragraphs) -->
-                    <div class="about-zone-main">
-                        <div class="main-left">
-                            <span class="eyebrow">// ABOUT</span>
-                            <div class="large-statement-container" style="margin-top: 2rem;">
-                                <h2 class="large-statement">Code, design, <br> and everything in between.</h2>
-                            </div>
-                            <!-- Paragraphs moved to bottom-left -->
-                            <div class="about-paragraphs" style="margin-top: 4rem; display: flex; flex-direction: column; gap: 1.5rem; text-align: justify;">
-                                <p class="body-text">
+<div class="about-section" id="about">
+<!-- Zone: Main (Now contains Top labels and Body paragraphs) -->
+<div class="about-zone-main">
+<div class="main-left">
+<span class="eyebrow">// ABOUT</span>
+<div class="large-statement-container" style="margin-top: 2rem;">
+<h2 class="large-statement">Code, design, <br/> and everything in between.</h2>
+</div>
+<!-- Paragraphs moved to bottom-left -->
+<div class="about-paragraphs" style="margin-top: 4rem; display: flex; flex-direction: column; gap: 1.5rem; text-align: justify;">
+<p class="body-text">
                                     I'm Kishore — a final-year IT student at SASTRA University, someone who likes building things end to end. From backend logic to the smallest interface detail, I care about the full picture, not just the part that looks good on the surface. A lot of my recent curiosity has been pulled toward agentic AI and RAG systems — teaching software to think a little more and guess a little less. It's where my focus is right now, but it sits alongside a broader love for clean architecture, thoughtful design, and code built to last. Outside of that, you'll usually find me traveling somewhere new or playing keyboard — good ways to reset between debugging sessions.
                                 </p>
-                            </div>
-                        </div>
-                        <div class="main-right">
-                            <span class="eyebrow">// SKILLS</span>
-                            <div class="skills-wrapper" style="flex: 1; position: relative; margin-top: 2rem;">
-                                <div class="about-skills-container" aria-hidden="true" tabindex="0">
-                                    <div class="about-skills-loop">
-                                    <!-- First list -->
-                                    <ul class="skills-list">
-                                        <li class="skill-item"><span class="skill-index">01</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Python</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
-                                        <li class="skill-item"><span class="skill-index">02</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">C++</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
-                                        <li class="skill-item"><span class="skill-index">03</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">JavaScript</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
-                                        <li class="skill-item"><span class="skill-index">04</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">SQL</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
-                                        <li class="skill-item"><span class="skill-index">05</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">React.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Framework</span></li>
-                                        <li class="skill-item"><span class="skill-index">06</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Node.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Framework</span></li>
-                                        <li class="skill-item"><span class="skill-index">07</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Three.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Frontend</span></li>
-                                        <li class="skill-item"><span class="skill-index">08</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">GSAP</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Frontend</span></li>
-                                        <li class="skill-item"><span class="skill-index">09</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">MySQL</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
-                                        <li class="skill-item"><span class="skill-index">10</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">MongoDB</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
-                                        <li class="skill-item"><span class="skill-index">11</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Supabase</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
-                                        <li class="skill-item"><span class="skill-index">12</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">DSA</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
-                                        <li class="skill-item"><span class="skill-index">13</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">OOP</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
-                                        <li class="skill-item"><span class="skill-index">14</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">DBMS</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
-                                        <li class="skill-item"><span class="skill-index">15</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">LangChain</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">16</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">RAG Pipelines</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">17</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Generative AI</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">18</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Computer Vision</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">19</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Stable Diffusion</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">20</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">OpenCV</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">21</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Git / GitHub</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                        <li class="skill-item"><span class="skill-index">22</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">VS Code</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                        <li class="skill-item"><span class="skill-index">23</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Linux (Ubuntu)</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                        <li class="skill-item"><span class="skill-index">24</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Vite</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                        <li class="skill-item"><span class="skill-index">25</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Antigravity</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                    </ul>
-                                    <!-- Duplicate list for seamless infinite scroll -->
-                                    <ul class="skills-list" aria-hidden="true">
-                                        <li class="skill-item"><span class="skill-index">01</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Python</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
-                                        <li class="skill-item"><span class="skill-index">02</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">C++</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
-                                        <li class="skill-item"><span class="skill-index">03</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">JavaScript</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
-                                        <li class="skill-item"><span class="skill-index">04</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">SQL</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
-                                        <li class="skill-item"><span class="skill-index">05</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">React.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Framework</span></li>
-                                        <li class="skill-item"><span class="skill-index">06</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Node.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Framework</span></li>
-                                        <li class="skill-item"><span class="skill-index">07</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Three.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Frontend</span></li>
-                                        <li class="skill-item"><span class="skill-index">08</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">GSAP</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Frontend</span></li>
-                                        <li class="skill-item"><span class="skill-index">09</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">MySQL</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
-                                        <li class="skill-item"><span class="skill-index">10</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">MongoDB</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
-                                        <li class="skill-item"><span class="skill-index">11</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Supabase</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
-                                        <li class="skill-item"><span class="skill-index">12</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">DSA</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
-                                        <li class="skill-item"><span class="skill-index">13</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">OOP</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
-                                        <li class="skill-item"><span class="skill-index">14</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">DBMS</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
-                                        <li class="skill-item"><span class="skill-index">15</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">LangChain</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">16</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">RAG Pipelines</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">17</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Generative AI</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">18</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Computer Vision</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">19</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Stable Diffusion</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">20</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">OpenCV</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
-                                        <li class="skill-item"><span class="skill-index">21</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Git / GitHub</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                        <li class="skill-item"><span class="skill-index">22</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">VS Code</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                        <li class="skill-item"><span class="skill-index">23</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Linux (Ubuntu)</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                        <li class="skill-item"><span class="skill-index">24</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Vite</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                        <li class="skill-item"><span class="skill-index">25</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Antigravity</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            </div>
-                            <!-- Accessible static list -->
-                            <ul class="visually-hidden">
-                                <li>Python (Programming)</li>
-                                <li>C++ (Programming)</li>
-                                <li>JavaScript (Programming)</li>
-                                <li>SQL (Programming)</li>
-                                <li>React.js (Framework)</li>
-                                <li>Node.js (Framework)</li>
-                                <li>Three.js (Frontend)</li>
-                                <li>GSAP (Frontend)</li>
-                                <li>MySQL (Database)</li>
-                                <li>MongoDB (Database)</li>
-                                <li>Supabase (Database)</li>
-                                <li>DSA (Core CS)</li>
-                                <li>OOP (Core CS)</li>
-                                <li>DBMS (Core CS)</li>
-                                <li>LangChain (AI &amp; ML)</li>
-                                <li>RAG Pipelines (AI &amp; ML)</li>
-                                <li>Generative AI (AI &amp; ML)</li>
-                                <li>Computer Vision (AI &amp; ML)</li>
-                                <li>Stable Diffusion (AI &amp; ML)</li>
-                                <li>OpenCV (AI &amp; ML)</li>
-                                <li>Git / GitHub (Tools)</li>
-                                <li>VS Code (Tools)</li>
-                                <li>Linux / Ubuntu (Tools)</li>
-                                <li>Vite (Tools)</li>
-                                <li>Antigravity (Tools)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ═══════════════════════════════════════════════════
+</div>
+</div>
+<div class="main-right">
+<span class="eyebrow">// SKILLS</span>
+<div class="skills-wrapper" style="flex: 1; position: relative; margin-top: 2rem;">
+<div aria-hidden="true" class="about-skills-container" tabindex="0">
+<div class="about-skills-loop">
+<!-- First list -->
+<ul class="skills-list">
+<li class="skill-item"><span class="skill-index">01</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Python</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
+<li class="skill-item"><span class="skill-index">02</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">C++</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
+<li class="skill-item"><span class="skill-index">03</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">JavaScript</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
+<li class="skill-item"><span class="skill-index">04</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">SQL</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
+<li class="skill-item"><span class="skill-index">05</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">React.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Framework</span></li>
+<li class="skill-item"><span class="skill-index">06</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Node.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Framework</span></li>
+<li class="skill-item"><span class="skill-index">07</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Three.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Frontend</span></li>
+<li class="skill-item"><span class="skill-index">08</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">GSAP</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Frontend</span></li>
+<li class="skill-item"><span class="skill-index">09</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">MySQL</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
+<li class="skill-item"><span class="skill-index">10</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">MongoDB</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
+<li class="skill-item"><span class="skill-index">11</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Supabase</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
+<li class="skill-item"><span class="skill-index">12</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">DSA</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
+<li class="skill-item"><span class="skill-index">13</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">OOP</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
+<li class="skill-item"><span class="skill-index">14</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">DBMS</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
+<li class="skill-item"><span class="skill-index">15</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">LangChain</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">16</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">RAG Pipelines</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">17</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Generative AI</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">18</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Computer Vision</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">19</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Stable Diffusion</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">20</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">OpenCV</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">21</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Git / GitHub</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+<li class="skill-item"><span class="skill-index">22</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">VS Code</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+<li class="skill-item"><span class="skill-index">23</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Linux (Ubuntu)</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+<li class="skill-item"><span class="skill-index">24</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Vite</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+<li class="skill-item"><span class="skill-index">25</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Antigravity</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+</ul>
+<!-- Duplicate list for seamless infinite scroll -->
+<ul aria-hidden="true" class="skills-list">
+<li class="skill-item"><span class="skill-index">01</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Python</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
+<li class="skill-item"><span class="skill-index">02</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">C++</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
+<li class="skill-item"><span class="skill-index">03</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">JavaScript</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
+<li class="skill-item"><span class="skill-index">04</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">SQL</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Programming</span></li>
+<li class="skill-item"><span class="skill-index">05</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">React.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Framework</span></li>
+<li class="skill-item"><span class="skill-index">06</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Node.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Framework</span></li>
+<li class="skill-item"><span class="skill-index">07</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Three.js</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Frontend</span></li>
+<li class="skill-item"><span class="skill-index">08</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">GSAP</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Frontend</span></li>
+<li class="skill-item"><span class="skill-index">09</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">MySQL</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
+<li class="skill-item"><span class="skill-index">10</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">MongoDB</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
+<li class="skill-item"><span class="skill-index">11</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Supabase</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Database</span></li>
+<li class="skill-item"><span class="skill-index">12</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">DSA</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
+<li class="skill-item"><span class="skill-index">13</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">OOP</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
+<li class="skill-item"><span class="skill-index">14</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">DBMS</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Core CS</span></li>
+<li class="skill-item"><span class="skill-index">15</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">LangChain</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">16</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">RAG Pipelines</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">17</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Generative AI</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">18</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Computer Vision</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">19</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Stable Diffusion</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">20</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">OpenCV</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">AI &amp; ML</span></li>
+<li class="skill-item"><span class="skill-index">21</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Git / GitHub</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+<li class="skill-item"><span class="skill-index">22</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">VS Code</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+<li class="skill-item"><span class="skill-index">23</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Linux (Ubuntu)</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg"></span><span class="seg"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+<li class="skill-item"><span class="skill-index">24</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Vite</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+<li class="skill-item"><span class="skill-index">25</span><span class="skill-name" style="flex:1; margin-left: 1.5rem;">Antigravity</span><span class="skill-level"><span class="level-bar"><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span><span class="seg filled"></span></span></span><span class="skill-tag" style="margin-left: 1rem;">Tools</span></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Accessible static list -->
+<ul class="visually-hidden">
+<li>Python (Programming)</li>
+<li>C++ (Programming)</li>
+<li>JavaScript (Programming)</li>
+<li>SQL (Programming)</li>
+<li>React.js (Framework)</li>
+<li>Node.js (Framework)</li>
+<li>Three.js (Frontend)</li>
+<li>GSAP (Frontend)</li>
+<li>MySQL (Database)</li>
+<li>MongoDB (Database)</li>
+<li>Supabase (Database)</li>
+<li>DSA (Core CS)</li>
+<li>OOP (Core CS)</li>
+<li>DBMS (Core CS)</li>
+<li>LangChain (AI &amp; ML)</li>
+<li>RAG Pipelines (AI &amp; ML)</li>
+<li>Generative AI (AI &amp; ML)</li>
+<li>Computer Vision (AI &amp; ML)</li>
+<li>Stable Diffusion (AI &amp; ML)</li>
+<li>OpenCV (AI &amp; ML)</li>
+<li>Git / GitHub (Tools)</li>
+<li>VS Code (Tools)</li>
+<li>Linux / Ubuntu (Tools)</li>
+<li>Vite (Tools)</li>
+<li>Antigravity (Tools)</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- ═══════════════════════════════════════════════════
                      PROJECTS SECTION (Full Viewport — revealed by scroll)
                      ═══════════════════════════════════════════════════ -->
-                <div class="projects-section" id="project">
-                    <div class="projects-zone-main">
-                        <span class="eyebrow" style="margin-bottom: clamp(0.5rem, 1.5vh, 2rem); display: block;">// PROJECTS</span>
-                        
-                        <div class="projects-stack" style="display: grid; width: 100%;">
-                            <div class="project-presentation" id="project-1">
-                                <!-- Left Column: Details & Tech Stack -->
-                                <div class="project-details">
-                                <h2 class="project-title-large">Nutrinet</h2>
-                                <p class="project-desc-large">
+<div class="projects-section" id="project">
+<div class="projects-zone-main">
+<span class="eyebrow" style="margin-bottom: clamp(0.5rem, 1.5vh, 2rem); display: block;">// PROJECTS</span>
+<div class="projects-stack" style="display: grid; width: 100%;">
+<div class="project-presentation" id="project-1">
+<!-- Left Column: Details & Tech Stack -->
+<div class="project-details">
+<h2 class="project-title-large">Nutrinet</h2>
+<p class="project-desc-large">
                                     NutriNet is an AI-powered personalized nutrition and health assistant that uses YOLO for real-time food detection, enabling users to scan meals instantly and track calories, macros, and daily intake. It predicts cardiovascular risk based on personal health metrics and family history, and offers personalized nutrition advice to help users build healthier dietary habits.
                                 </p>
-
-                                <h4 class="tech-models-heading">UNDER THE HOOD</h4>
-                                <div class="bento-grid-p1">
-                                    <div class="bento-item bento-large bento-solid">
-                                        <span class="bubble-title">YOLO 26M</span>
-                                        <span class="bubble-sub">Vision Model</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">Edge AI</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">FastAPI</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">React</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">Tailwind</span>
-                                    </div>
-                                    <div class="bento-item bento-wide text-sm">
-                                        <span class="bubble-title">Portion Scaling Algorithm</span>
-                                    </div>
-                                    <div class="bento-item bento-wide text-sm">
-                                        <span class="bubble-title">Hereditary Risk Analysis</span>
-                                    </div>
-                                    <div class="bento-item bento-wide">
-                                        <span class="bubble-title">ONNX Web</span>
-                                    </div>
-                                    <div class="bento-item bento-large bento-solid">
-                                        <span class="bubble-title">Random Forest</span>
-                                        <span class="bubble-sub">Classification</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">Supabase</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">Gemini 2.5</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right Column: Preview & Stats -->
-                            <div class="project-preview-area">
-                                <div class="preview-box">
-                                    <div class="preview-header">
-                                        <span class="live-preview-tag">PREVIEW</span>
-                                        <div class="preview-grid-decor"></div>
-                                    </div>
-                                    
-                                    <div class="preview-image-container">
-                                        <img src="./NutriNet.png" alt="NutriNet Project Preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" />
-                                    </div>
-
-                                    <div class="preview-stats-row">
-                                        <div class="stat-item">
-                                            <span class="stat-label">MODEL</span>
-                                            <span class="stat-val">YOLO26m + RF</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-label">DETECTION</span>
-                                            <span class="stat-val">mAP 0.95</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-label">RISK PREDICTION</span>
-                                            <span class="stat-val">AUC 80.03</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-label">DATASET</span>
-                                            <span class="stat-val">11K images</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="preview-links-row">
-                                    <a href="javascript:void(0);" class="preview-link flip-link">
-                                        <div class="flip-inner">
-                                            <div class="flip-front">
-                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+<h4 class="tech-models-heading">UNDER THE HOOD</h4>
+<div class="bento-grid-p1">
+<div class="bento-item bento-large bento-solid">
+<span class="bubble-title">YOLO 26M</span>
+<span class="bubble-sub">Vision Model</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Edge AI</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">FastAPI</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">React</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Tailwind</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Portion Scaling Algorithm</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Hereditary Risk Analysis</span>
+</div>
+<div class="bento-item bento-wide">
+<span class="bubble-title">ONNX Web</span>
+</div>
+<div class="bento-item bento-large bento-solid">
+<span class="bubble-title">Random Forest</span>
+<span class="bubble-sub">Classification</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Supabase</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Gemini 2.5</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Preview & Stats -->
+<div class="project-preview-area">
+<div class="preview-box">
+<div class="preview-header">
+<span class="live-preview-tag">PREVIEW</span>
+<div class="preview-grid-decor"></div>
+</div>
+<div class="preview-image-container">
+<img alt="NutriNet Project Preview" src="./NutriNet.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;"/>
+</div>
+<div class="preview-stats-row">
+<div class="stat-item">
+<span class="stat-label">MODEL</span>
+<span class="stat-val">YOLO26m + RF</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">DETECTION</span>
+<span class="stat-val">mAP 0.95</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">RISK PREDICTION</span>
+<span class="stat-val">AUC 80.03</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">DATASET</span>
+<span class="stat-val">11K images</span>
+</div>
+</div>
+</div>
+<div class="preview-links-row">
+<a class="preview-link flip-link" href="javascript:void(0);">
+<div class="flip-inner">
+<div class="flip-front">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" x2="16" y1="12" y2="12"></line></svg>
                                                 VIEW JOURNAL
                                             </div>
-                                            <div class="flip-back">
-                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+<div class="flip-back">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                                                 UNDER REVIEW
                                             </div>
-                                        </div>
-                                    </a>
-                                    <div class="link-divider"></div>
-                                    <a href="https://github.com/KK-2k06/NutriNet" target="_blank" rel="noopener noreferrer" class="preview-link">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+</div>
+</a>
+<div class="link-divider"></div>
+<a class="preview-link" href="https://github.com/KK-2k06/NutriNet" rel="noopener noreferrer" target="_blank">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                         GITHUB REPO
                                     </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-presentation" id="project-2" style="visibility: hidden; opacity: 0; pointer-events: none;">
-
-                            <!-- Left Column: Details & Tech Stack -->
-                            <div class="project-details">
-                                <h2 class="project-title-large">Kyros AI</h2>
-                                <p class="project-desc-large">
+</div>
+</div>
+</div>
+<div class="project-presentation" id="project-2" style="visibility: hidden; opacity: 0; pointer-events: none;">
+<!-- Left Column: Details & Tech Stack -->
+<div class="project-details">
+<h2 class="project-title-large">Kyros AI</h2>
+<p class="project-desc-large">
                                     Kyros AI is an intelligent career coaching assistant that guides candidates from gap analysis to interview readiness. By analyzing user resumes against target job descriptions, it identifies skill gaps and surfaces curated video tutorials to close them. Users can chat directly with video content for deeper understanding, culminating in a full mock interview with AI-generated questions and graded feedback. Kyros transforms vague career goals into a concrete, step-by-step preparation roadmap.
                                 </p>
-
-                                <h4 class="tech-models-heading">UNDER THE HOOD</h4>
-                                <div class="bento-grid-p2">
-                                    <div class="bento-item bento-large bento-solid">
-                                        <span class="bubble-title">Mock Interview</span>
-                                        <span class="bubble-sub">Generator & Grader</span>
-                                    </div>
-                                    <div class="bento-item bento-wide text-sm">
-                                        <span class="bubble-title">Video RAG Indexing</span>
-                                    </div>
-                                    <div class="bento-item bento-wide text-sm">
-                                        <span class="bubble-title">Conversation Buffer Memory</span>
-                                    </div>
-                                    <div class="bento-item bento-wide text-sm">
-                                        <span class="bubble-title">Markdown-Aware Chunking</span>
-                                    </div>
-                                    <div class="bento-item bento-large bento-solid">
-                                        <span class="bubble-title">Gap Analysis</span>
-                                        <span class="bubble-sub">Resume vs JD Match</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">FastAPI</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">React</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">Supabase</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">Tailwind</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">PyMuPDF</span>
-                                    </div>
-                                    <div class="bento-item bento-normal">
-                                        <span class="bubble-title">YT API</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right Column: Preview & Stats -->
-                            <div class="project-preview-area">
-                                <div class="preview-box">
-                                    <div class="preview-header">
-                                        <span class="live-preview-tag">PREVIEW</span>
-                                        <div class="preview-grid-decor"></div>
-                                    </div>
-                                    
-                                    <div class="preview-image-container">
-                                        <!-- Real image should go here, using a placeholder gradient for now or the salad image if we had one -->
-                                        <img src="./Kyros.png" alt="Kyros AI Project Preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" />
-                                    </div>
-
-                                    <div class="preview-stats-row">
-                                        <div class="stat-item">
-                                            <span class="stat-label">LLM ENGINE</span>
-                                            <span class="stat-val">Gemini 3.5 Flash</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-label">ARCHITECTURE</span>
-                                            <span class="stat-val">4-Agent System</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-label">VECTOR DB</span>
-                                            <span class="stat-val">ChromaDB</span>
-                                        </div>
-                                        <div class="stat-item">
-                                            <span class="stat-label">FRAMEWORK</span>
-                                            <span class="stat-val">LangChain</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="preview-links-row" style="justify-content: center;">
-                                    <a href="https://github.com/KK-2k06/Kyros" target="_blank" class="preview-link">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+<h4 class="tech-models-heading">UNDER THE HOOD</h4>
+<div class="bento-grid-p2">
+<div class="bento-item bento-large bento-solid">
+<span class="bubble-title">Mock Interview</span>
+<span class="bubble-sub">Generator &amp; Grader</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Video RAG Indexing</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Conversation Buffer Memory</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Markdown-Aware Chunking</span>
+</div>
+<div class="bento-item bento-large bento-solid">
+<span class="bubble-title">Gap Analysis</span>
+<span class="bubble-sub">Resume vs JD Match</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">FastAPI</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">React</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Supabase</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Tailwind</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">PyMuPDF</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">YT API</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Preview & Stats -->
+<div class="project-preview-area">
+<div class="preview-box">
+<div class="preview-header">
+<span class="live-preview-tag">PREVIEW</span>
+<div class="preview-grid-decor"></div>
+</div>
+<div class="preview-image-container">
+<!-- Real image should go here, using a placeholder gradient for now or the salad image if we had one -->
+<img alt="Kyros AI Project Preview" src="./Kyros.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;"/>
+</div>
+<div class="preview-stats-row">
+<div class="stat-item">
+<span class="stat-label">LLM ENGINE</span>
+<span class="stat-val">Gemini 3.5 Flash</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">ARCHITECTURE</span>
+<span class="stat-val">4-Agent System</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">VECTOR DB</span>
+<span class="stat-val">ChromaDB</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">FRAMEWORK</span>
+<span class="stat-val">LangChain</span>
+</div>
+</div>
+</div>
+<div class="preview-links-row" style="justify-content: center;">
+<a class="preview-link" href="https://github.com/KK-2k06/Kyros" target="_blank">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                         GITHUB REPO
                                     </a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
+</div>
+</div><div class="project-presentation" id="project-3" style="visibility: hidden; opacity: 0; pointer-events: none;">
+<!-- Left Column: Details & Tech Stack -->
+<div class="project-details">
+<h2 class="project-title-large">Toonify</h2>
+<p class="project-desc-large">Built as part of the Infosys Springboard Virtual Internship 6.0, an AI-powered image transformation platform that converts photos into realistic artistic styles such as Pencil Sketch, Oil Painting, Pixar, Studio Ghibli, Comics, and 2D Cartoon using Stable Diffusion, AnimeGAN, and OpenCV, with cloud storage, secure authentication, and generation history.</p>
+<h4 class="tech-models-heading">UNDER THE HOOD</h4>
+<div class="bento-grid-p3">
+<div class="bento-item bento-large bento-solid">
+<span class="bubble-title">6 Artistic Styles</span>
+<span class="bubble-sub">Multi-Model Gen</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">DreamShaper v8</span>
+<span class="bubble-sub" style="font-size: 0.65em; opacity: 0.7;">Comic Book Style</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Classic Anim Diffusion</span>
+<span class="bubble-sub" style="font-size: 0.65em; opacity: 0.7;">Disney/Pixar Style</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">AnimeGANv3 ONNX</span>
+<span class="bubble-sub" style="font-size: 0.65em; opacity: 0.7;">Studio Ghibli Style</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Automatic History Save</span>
+</div>
+<div class="bento-item bento-triple text-sm">
+<span class="bubble-title">OpenCV: Oil Painting & Pencil Sketch</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Live Preview</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Credit System</span>
+<span class="bubble-sub" style="font-size: 0.65em; opacity: 0.7;">5 Free Generations</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Simulated Billing</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">Tailwind</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Preview & Stats -->
+<div class="project-preview-area">
+<div class="preview-box">
+<div class="preview-header">
+<span class="live-preview-tag">PREVIEW</span>
+<div class="preview-grid-decor"></div>
+</div>
+<div class="preview-image-container">
+<!-- Real image should go here, using a placeholder gradient for now or the salad image if we had one -->
+<img alt="Toonify Project Preview" src="./Toon.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;"/>
+</div>
+<div class="preview-stats-row">
+<div class="stat-item">
+<span class="stat-label">PIPELINE</span>
+<span class="stat-val">Img2Img</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">MODELS</span>
+<span class="stat-val">SD 1.5 + ONNX</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">BACKEND</span>
+<span class="stat-val">Flask + SQLite</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">FRONTEND</span>
+<span class="stat-val">React</span>
+</div>
+</div>
+</div>
+<div class="preview-links-row" style="justify-content: center;">
+<a class="preview-link" href="https://github.com/KK-2k06/AI-Image-Transformation" target="_blank">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        GITHUB REPO
+                                    </a>
+<div class="link-divider"></div>
+<a class="preview-link highlight" href="./Toonify_Documentation.pdf" target="_blank">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                        DOCUMENTATION
+                                    </a>
+</div>
+</div>
+</div>
+<div class="project-presentation" id="project-4" style="visibility: hidden; opacity: 0; pointer-events: none;">
+<!-- Left Column: Details & Tech Stack -->
+<div class="project-details">
+<h2 class="project-title-large">PrepPilot</h2>
+<p class="project-desc-large">An AI study companion that turns any syllabus into a personalized exam prep journey. Upload a PDF to generate a day-by-day study schedule with auto-prioritization. Reinforce learning through daily custom quizzes with AI-graded feedback, while the app automatically detects weak topics to curate a tailored dashboard of the best YouTube videos and articles.</p>
+<h4 class="tech-models-heading">UNDER THE HOOD</h4>
+<div class="bento-grid-p4">
+<div class="bento-item bento-large bento-solid">
+<span class="bubble-title">Adaptive Study Schedules</span>
+<span class="bubble-sub">Weightage-Based Gen</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">100% Private</span>
+<span class="bubble-sub" style="font-size: 0.65em; opacity: 0.7;">Runs Entirely on Your Device</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">React</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">FastAPI</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">Smart PDF Parsing</span>
+<span class="bubble-sub" style="font-size: 0.65em; opacity: 0.7;">Extract Core Topics</span>
+</div>
+<div class="bento-item bento-large bento-solid">
+<span class="bubble-title">Semantic Auto-Grading</span>
+<span class="bubble-sub">Custom Quiz Feedback</span>
+</div>
+<div class="bento-item bento-wide text-sm">
+<span class="bubble-title">MCP Resource Finder</span>
+<span class="bubble-sub" style="font-size: 0.65em; opacity: 0.7;">Weak-Topic Curation</span>
+</div>
+<div class="bento-item bento-triple">
+<span class="bubble-title">Gemini Flash Lite + Tavily Search</span>
+</div>
+<div class="bento-item bento-normal">
+<span class="bubble-title">pdfplumber</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Preview & Stats -->
+<div class="project-preview-area">
+<div class="preview-box">
+<div class="preview-header">
+<span class="live-preview-tag">PREVIEW</span>
+<div class="preview-grid-decor"></div>
+</div>
+<div class="preview-image-container">
+<!-- Real image should go here, using a placeholder gradient for now or the salad image if we had one -->
+<img alt="PrepPilot Project Preview" src="./PrepPilot.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;"/>
+</div>
+<div class="preview-stats-row">
+<div class="stat-item">
+<span class="stat-label">ARCHITECTURE</span>
+<span class="stat-val">3 Agent System</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">AI MODELS</span>
+<span class="stat-val">Gemini 3.1 Flash</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">PERFORMANCE</span>
+<span class="stat-val">Multi-Layer Caching</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">DATA</span>
+<span class="stat-val">Local Storage</span>
+</div>
+</div>
+</div>
+<div class="preview-links-row" style="justify-content: center;">
+<a class="preview-link" href="https://github.com/KK-2k06/PrepPilot" target="_blank">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        GITHUB REPO
+                                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-        <!-- About section logic is now handled entirely within the hero-stage for seamless cursor morphing. -->
-
-        <script type="module" src="./script.js"></script>
-    </body>
+<!-- About section logic is now handled entirely within the hero-stage for seamless cursor morphing. -->
+<script src="./script.js" type="module"></script>
+</body>
 </html>

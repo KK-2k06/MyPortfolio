@@ -147,43 +147,54 @@ function init() {
     // ════════════════════════════════════════════════════════════════════════
     const proj1 = document.querySelector("#project-1");
     const proj2 = document.querySelector("#project-2");
+    const proj3 = document.querySelector("#project-3");
+    const proj4 = document.querySelector("#project-4");
 
-    if (proj1 && proj2) {
-        const transStart = 0.65;
-        const transDuration = 0.25; // 0.65 to 0.90
-        const inStart = transStart + transDuration * 0.4; // slight overlap
+    if (proj1 && proj2 && proj3 && proj4) {
+        // Initialize hidden projects at the bottom of the container
+        tl.set([proj2, proj3, proj4], { yPercent: 100 }, 0);
 
-        // --- Stack-Scale Swap Transition ---
+        // --- Transition 1: Project 1 -> Project 2 ---
+        const t1Start = 0.65;
+        const t1Duration = 0.10;
         
-        const p1Duration = transDuration * 0.5;
-        const p2Start = transStart + transDuration * 0.15;
-        const p2Duration = transDuration * 0.85;
-
-        // Project 1 scales down, completely vanishes (opacity 0), and pushes slightly up
         tl.to(proj1, {
-            scale: 0.92,
-            opacity: 0,
-            yPercent: -5,
-            ease: "power2.inOut",
-            duration: p1Duration
-        }, transStart);
+            scale: 0.92, opacity: 0, yPercent: -5,
+            ease: "power2.inOut", duration: t1Duration * 0.5
+        }, t1Start);
+        tl.set(proj1, { visibility: "hidden" }, t1Start + t1Duration * 0.5);
 
-        // Hide proj1 completely after it fades out so it doesn't block clicks
-        tl.set(proj1, { visibility: "hidden" }, transStart + p1Duration);
+        tl.to(proj2, 
+            { yPercent: 0, opacity: 1, visibility: "visible", ease: "power2.out", duration: t1Duration * 0.85 }, 
+        t1Start + t1Duration * 0.15);
 
-        // Project 2 slides up from below, starting fully opaque
-        tl.fromTo(proj2, 
-            { 
-                yPercent: 100, 
-                opacity: 1, 
-                visibility: "visible" 
-            }, 
-            {
-                yPercent: 0,
-                ease: "power2.out",
-                duration: p2Duration
-            }, 
-        p2Start);
+        // --- Transition 2: Project 2 -> Project 3 ---
+        const t2Start = 0.76;
+        const t2Duration = 0.10;
+        
+        tl.to(proj2, {
+            scale: 0.92, opacity: 0, yPercent: -5,
+            ease: "power2.inOut", duration: t2Duration * 0.5
+        }, t2Start);
+        tl.set(proj2, { visibility: "hidden" }, t2Start + t2Duration * 0.5);
+
+        tl.to(proj3, 
+            { yPercent: 0, opacity: 1, visibility: "visible", ease: "power2.out", duration: t2Duration * 0.85 }, 
+        t2Start + t2Duration * 0.15);
+
+        // --- Transition 3: Project 3 -> Project 4 ---
+        const t3Start = 0.87;
+        const t3Duration = 0.10;
+        
+        tl.to(proj3, {
+            scale: 0.92, opacity: 0, yPercent: -5,
+            ease: "power2.inOut", duration: t3Duration * 0.5
+        }, t3Start);
+        tl.set(proj3, { visibility: "hidden" }, t3Start + t3Duration * 0.5);
+
+        tl.to(proj4, 
+            { yPercent: 0, opacity: 1, visibility: "visible", ease: "power2.out", duration: t3Duration * 0.85 }, 
+        t3Start + t3Duration * 0.15);
     }
 
     // ════════════════════════════════════════════════════════════════════════
@@ -218,11 +229,7 @@ function init() {
                     // 3. Force the GSAP timeline instantly to the target progress
                     tl.progress(targetProgress);
                     
-                    // 4. Kill the GSAP scrub delay so it doesn't animate from the old position
-                    const scrubTween = st.getTween();
-                    if (scrubTween) scrubTween.kill();
-                    
-                    // 5. Fade the UI back in
+                    // 4. Fade the UI back in
                     gsap.to(overlay, { opacity: 1, duration: 0.4, onComplete: () => {
                         document.body.style.pointerEvents = '';
                     }});

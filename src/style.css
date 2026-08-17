@@ -381,7 +381,7 @@ body {
 
 .side-label {
     font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     letter-spacing: 0.15em;
     color: var(--text-dim);
     writing-mode: vertical-rl;
@@ -812,6 +812,23 @@ body {
     width: 100%;
     height: clamp(220px, 30vh, 280px);
     margin-top: 1rem;
+}
+
+.bento-grid-p3,
+.bento-grid-p4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr); /* 20 cells exactly! */
+    grid-auto-flow: dense;
+    gap: clamp(0.4rem, 1vh, 0.75rem);
+    width: 100%;
+    height: clamp(220px, 30vh, 280px);
+    margin-top: 1rem;
+}
+
+.bento-triple {
+    grid-column: span 3;
+    grid-row: span 1;
 }
 
 .bento-item {
