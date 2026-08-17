@@ -39,3 +39,24 @@ if (typewriterEl) {
         }, 120); // 120ms per character
     }, 300);
 }
+
+import gsap from 'gsap';
+
+// Custom Cursor Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const dot = document.querySelector('.cursor-dot');
+    const ring = document.querySelector('.cursor-ring');
+    if (dot && ring) {
+        gsap.set(dot, { xPercent: -50, yPercent: -50 });
+        gsap.set(ring, { xPercent: -50, yPercent: -50 });
+
+        const xToRing = gsap.quickTo(ring, "x", { duration: 0.15, ease: "power3.out" });
+        const yToRing = gsap.quickTo(ring, "y", { duration: 0.15, ease: "power3.out" });
+
+        document.addEventListener('mousemove', (e) => {
+            gsap.set(dot, { x: e.clientX, y: e.clientY });
+            xToRing(e.clientX);
+            yToRing(e.clientY);
+        });
+    }
+});

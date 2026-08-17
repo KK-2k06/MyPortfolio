@@ -1281,3 +1281,8 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* Custom Cursor */
+* { cursor: none !important; }
+.cursor-dot { position: fixed; top: 0; left: 0; width: 6px; height: 6px; border-radius: 50%; background-color: #19b450; pointer-events: none; z-index: 999999; will-change: transform; }
+.cursor-ring { position: fixed; top: 0; left: 0; width: 32px; height: 32px; border: 1px solid rgba(25, 180, 80, 0.55); border-radius: 50%; pointer-events: none; z-index: 999998; will-change: transform; }
